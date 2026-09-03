@@ -1,0 +1,25 @@
+{
+  "verdict": "NOT_MEET",
+  "metrics": {
+    "train": {
+      "brightness": 71.1,
+      "mass_cy": 81.9,
+      "lower_minus_upper": -34.0
+    },
+    "before_first": {
+      "brightness": 111.4,
+      "mass_cy": 131.8,
+      "lower_minus_upper": 39.6
+    },
+    "after_overtilt": {
+      "brightness": 109.4,
+      "mass_cy": 141.9,
+      "lower_minus_upper": 78.1
+    },
+    "now": {
+      "brightness": 111.0,
+      "mass_cy": 146.6,
+      "lower_minus_upper": 92.7
+    }
+  }
+}

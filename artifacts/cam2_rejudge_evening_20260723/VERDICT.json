@@ -1,0 +1,20 @@
+{
+  "verdict": "NOT_MEET",
+  "metrics": {
+    "train": {
+      "brightness": 71.1,
+      "mass_cy": 81.9,
+      "lower_minus_upper": -34.0
+    },
+    "afternoon_bad": {
+      "brightness": 111.0,
+      "mass_cy": 146.6,
+      "lower_minus_upper": 92.7
+    },
+    "evening_now": {
+      "brightness": 126.7,
+      "mass_cy": 121.6,
+      "lower_minus_upper": 32.0
+    }
+  }
+}

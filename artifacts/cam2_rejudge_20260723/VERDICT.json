@@ -1,0 +1,162 @@
+{
+  "timestamp": "2026-07-23T16:36+08",
+  "train_ref": "LIBERO-plus sim smoke (h100_libero_spatial_task0_success.mp4) agentview|wrist \u2014 NOT real lerobot demos",
+  "layout": "[cam2 scene | cam1 wrist] 224x448",
+  "cam_rates_hz": {
+    "cam1_compressed": 30.0,
+    "cam2_compressed": 15.0
+  },
+  "image_metrics_scene224": {
+    "live": {
+      "brightness": 111.43897247314453,
+      "lower_bright": 131.2557373046875,
+      "upper_bright": 91.62220764160156,
+      "lower_minus_upper": 39.63352966308594,
+      "mass_cy": 131.76819170782483,
+      "grad_y": 6.345250606536865,
+      "grad_x": 4.5362548828125
+    },
+    "train": {
+      "brightness": 71.12042236328125,
+      "lower_bright": 54.14037322998047,
+      "upper_bright": 88.10047149658203,
+      "lower_minus_upper": -33.96009826660156,
+      "mass_cy": 81.8749009740261,
+      "grad_y": 3.5844545364379883,
+      "grad_x": 3.010770320892334
+    },
+    "prev_morning": {
+      "brightness": 102.05170440673828,
+      "lower_bright": 159.05575561523438,
+      "upper_bright": 45.04765701293945,
+      "lower_minus_upper": 114.00809860229492,
+      "mass_cy": 157.18039195720525,
+      "grad_y": 2.645739793777466,
+      "grad_x": 2.8069546222686768
+    },
+    "prev_pose_fix": {
+      "brightness": 97.39163208007812,
+      "lower_bright": 152.6905059814453,
+      "upper_bright": 42.09276580810547,
+      "lower_minus_upper": 110.59774017333984,
+      "mass_cy": 157.48127898254629,
+      "grad_y": 2.6608943939208984,
+      "grad_x": 2.8737919330596924
+    },
+    "prev_pose_fix2": {
+      "brightness": 117.34937286376953,
+      "lower_bright": 128.9296875,
+      "upper_bright": 105.76905059814453,
+      "lower_minus_upper": 23.16063690185547,
+      "mass_cy": 124.99616104037798,
+      "grad_y": 5.463604927062988,
+      "grad_x": 4.610246181488037
+    }
+  },
+  "proprio_fk": {
+    "note": "FK flange+default tool (current_pose topic down); approximate",
+    "joints": [
+      -0.050396498292684555,
+      0.5012283325195312,
+      0.20574843883514404,
+      -1.8109842538833618,
+      -0.17635828256607056,
+      2.4122912883758545,
+      -2.1414735317230225
+    ],
+    "fingers": [
+      0.03999975323677063,
+      0.03999975323677063
+    ],
+    "ee_xyz_fk": [
+      0.6557335587405309,
+      0.09036523418151375,
+      0.28046400687459505
+    ],
+    "ee_quat_xyzw_fk": [
+      0.36561867292445543,
+      0.9289073698016977,
+      0.019518122378148896,
+      0.05543579381486169
+    ],
+    "origin": [
+      0.45,
+      0.0,
+      0.0
+    ],
+    "aligned_raw": [
+      0.20573359727859497,
+      0.09036523103713989,
+      0.2804639935493469,
+      2.048539876937866,
+      -0.7071177363395691,
+      -0.05918067693710327,
+      0.03999975323677063,
+      -0.03999975323677063
+    ],
+    "aligned_norm": [
+      0.9868272542953491,
+      0.16717290878295898,
+      -0.5988816022872925,
+      -0.17691242694854736,
+      -0.19083142280578613,
+      0.10865151882171631,
+      0.8940050601959229,
+      -0.9017051458358765
+    ],
+    "ood_|norm|>1": [],
+    "train_state_min": [
+      -0.4856736361980438,
+      -0.3313629925251007,
+      0.008128180168569088,
+      0.8415665030479431,
+      -3.616978406906128,
+      -1.842738389968872,
+      -0.002542249858379364,
+      -0.042119648307561874
+    ],
+    "train_state_max": [
+      0.21031762659549713,
+      0.39128610491752625,
+      1.3660105466842651,
+      3.7743608951568604,
+      3.5752453804016113,
+      1.3747878074645996,
+      0.042380549013614655,
+      0.0010137537028640509
+    ],
+    "prev_saved_aligned_norm": [
+      0.7308905124664307,
+      0.12292969226837158,
+      -0.5184545516967773,
+      2.6464462280273438e-05,
+      -6.73532485961914e-05,
+      0.00019884109497070312,
+      -0.8645585179328918,
+      0.9298126697540283
+    ],
+    "prev_saved_franka_xyz": [
+      0.566668689250946,
+      0.07437906414270401,
+      0.3350691795349121
+    ]
+  },
+  "qualitative": {
+    "improved_after_cam2_move": [
+      "Closer workspace framing vs morning/pose_fix (pen larger, more centered)",
+      "Less distant table-edge composition; better fill of WAM 224 crop with task region",
+      "pose_fix2 already similar; latest live is incremental tighten/center on pen"
+    ],
+    "still_differs_critical": [
+      "Elevation/pitch: LIVE near eye-level across table; TRAIN agentview high oblique (~45-60 deg down)",
+      "Domain gap: wood office vs sim cobblestone + household props (expected sim2real)"
+    ],
+    "still_differs_minor": [
+      "Brightness: live scene ~111 vs train ~71 mean (lab brighter)",
+      "Wrist: live often pen-only close-up without gripper fingers; train shows fingers+object (pose-dependent)",
+      "Background clutter (monitors/plants) vs blank sim walls"
+    ],
+    "wam_closer_to_train": "Partially \u2014 task-region scale/centering improved, but camera pitch still far from agentview; domain gap unchanged",
+    "recommendation": "Ready for WAM retest (dryrun / reliable_pick) to measure policy effect; optional further cam2 raise+tilt down if agentview match is priority. Restart franka_robot_state_broadcaster for live proprio dump."
+  }
+}

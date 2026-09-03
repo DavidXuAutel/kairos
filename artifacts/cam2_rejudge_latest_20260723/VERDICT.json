@@ -1,0 +1,20 @@
+{
+  "verdict": "PARTIAL",
+  "metrics": {
+    "train": {
+      "brightness": 71.1,
+      "mass_cy": 81.9,
+      "lower_minus_upper": -34.0
+    },
+    "evening": {
+      "brightness": 126.7,
+      "mass_cy": 121.6,
+      "lower_minus_upper": 32.0
+    },
+    "now": {
+      "brightness": 130.4,
+      "mass_cy": 116.2,
+      "lower_minus_upper": -1.6
+    }
+  }
+}
